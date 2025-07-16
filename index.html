@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wyszukiwarka Filmów</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main-flex">
+    <div id="filters">
+      <h3>Filtry</h3>
+      <strong>Gatunek:</strong>
+      <div class="genre-list" id="genreButtons">
+        <button type="button" class="genre-btn" data-genre="Action">Akcja</button>
+        <button type="button" class="genre-btn" data-genre="Comedy">Komedia</button>
+        <button type="button" class="genre-btn" data-genre="Drama">Dramat</button>
+        <button type="button" class="genre-btn" data-genre="Sci-Fi">Sci-Fi</button>
+        <button type="button" class="genre-btn" data-genre="Adventure">Przygodowy</button>
+        <button type="button" class="genre-btn" data-genre="Horror">Horror</button>
+      </div>
+      <hr>
+      <label for="yearFrom">Rok od:</label>
+      <input type="number" id="yearFrom" name="yearFrom" min="1900" max="2025" placeholder="np. 2000">
+      <label for="yearTo">Rok do:</label>
+      <input type="number" id="yearTo" name="yearTo" min="1900" max="2025" placeholder="np. 2023">
+      
+    </div>
+    <div class="container">
+      <h1>🎬 Wyszukiwarka Filmów</h1>
+      <input type="text" id="searchInput" placeholder="Wpisz tytuł filmu...">
+      <button onclick="searchMovie()">Szukaj</button>
+      <div id="result"></div>
+    </div>
+  </div>
+
+  <div id="movieDetailModal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div id="movieDetailsContent"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
